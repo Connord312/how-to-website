@@ -83,6 +83,22 @@ main {
   line-height: 1.8;
 }
 
+
+.history-section {
+  margin-bottom: 20px; 
+}
+
+.history-section p {
+  margin-bottom: 1em; 
+}
+
+.history-image {
+  display: block;
+  margin: 30px auto; 
+  max-width: 100%;
+  height: auto;
+}
+
 .logo-header {
   display: grid;
   grid-template-columns: 1fr;
