@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/* Removes default spacing and makes element sizing easier. */
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -16,9 +18,13 @@ body {
   grid-template-columns: 1fr;
 }
 
+/* Uses a simple grid so the navbar stays at the top and the content goes below it. */
+
 .navbar {
   grid-area: navbar;
 }
+
+/* Puts the navbar in the top part of the page layout. */
 
 .navbar ul {
   list-style-type: none;
@@ -28,11 +34,14 @@ body {
   margin: 0;
   padding: 0;
 }
+/* Makes the navbar links line up in three equal columns, removes list bullets, and adds a background color. */
 
 .navbar ul li {
   display: grid;
   align-items: center;
 }
+
+/* Centers each navbar item vertically. */
 
 .navbar ul li a {
   color: white;
@@ -42,17 +51,25 @@ body {
   display: block;
 }
 
+/* Styles navbar links with white text, centered labels, and spacing around them. */
+
 .navbar ul li a:hover {
   background-color: #054ebb;
 }
+
+/* Gives the navbar links a different color when you hover over them. */
 
 .navbar ul li a.active {
   background-color: #054ebb;
 }
 
+/* Marks the active navbar link with a different background color. */
+
 main {
   grid-area: content;
 }
+
+/* Puts the main page content below the navbar. */
 
 .main-content {
   padding: 30px;
@@ -60,16 +77,22 @@ main {
   margin: 0 auto;
 }
 
+/* Adds space inside the main content, keeps it from getting too wide, and centers it. */
+
 
 .content {
   margin-top: 20px;
 }
+
+/* Adds a little space above the content area. */
 
 
 .main-content img {
   max-width: 100%;
   height: auto;
 }
+
+/* Makes images in the main content resize to fit their container. */
 
 
 .navbar {
@@ -78,19 +101,27 @@ main {
   z-index: 100;
 }
 
+/* Keeps the navbar at the top of the screen when scrolling. */
+
 .main-content p {
   font-size: 1rem;
   line-height: 1.8;
 }
+
+/* Uses a readable text size and spacing for paragraphs. */
 
 
 .history-section {
   margin-bottom: 20px; 
 }
 
+/* Adds space below each history section area. */
+
 .history-section p {
   margin-bottom: 1em; 
 }
+
+/* Adds space below each paragraph in the history section. */
 
 .history-image {
   display: block;
@@ -98,6 +129,8 @@ main {
   max-width: 100%;
   height: auto;
 }
+
+/* Centers the history image and keeps it from getting too large. */
 
 .logo-header {
   display: grid;
@@ -107,10 +140,14 @@ main {
   justify-items: center;
 }
 
+/* Styles the logo area with padding, a light background, and centered content. */
+
 .logo-header img {
   max-width: 200px;
   height: auto;
 }
+
+/* Keeps the logo image at a set width and keeps it looking right. */
 
 .steps {
   display: grid;
@@ -118,6 +155,8 @@ main {
   margin-top: 20px;
   gap: 20px;
 }
+
+/* Puts the steps one below the other with space between them. */
 
 .step {
   display: grid;
@@ -130,27 +169,40 @@ main {
   align-items: center;
 }
 
+/* Styles each step box with text on the left, an image on the right, and padding around it. */
+
 .step img {
   max-width: 150px;
   height: auto;
   border-radius: 8px;
 }
 
+/* Keeps step images small, keeps their shape, and rounds the corners a bit. */
+
+
 @media screen and (max-width: 600px) {
   .navbar ul {
     grid-template-columns: 1fr;
   }
+/* @media makes the navbar links stack vertically instead of side by side on small screens like phones. */
+  /* Makes the navbar use one column on small screens like phones. */
 
   .navbar ul li a {
     text-align: left;
     padding: 12px 16px;
   }
 
+  /* Adjusts the navbar link layout for smaller screens. (phones, etc...) */
+
   .step {
     grid-template-columns: 1fr;
   }
+
+  /* Stacks the step text and image on top of each other on small screens! */
 
   .step img {
     margin-top: 10px;
   }
 }
+
+/* Makes the page work better on phones by stacking the navbar and step items differently. */
